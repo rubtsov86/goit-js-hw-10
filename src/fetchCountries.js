@@ -3,12 +3,16 @@ import Notiflix from 'notiflix';
 
 const BASE_URL = "https://restcountries.com/v3.1/name/";
 const inputRef = document.querySelector('#search-box');
+const countriesListRef = document.querySelector('.country-list');
+const countryInfoRef = document.querySelector('.country-info');
 
 
 export default function fetchCountries(name) {
     const inputValue = inputRef.value;
     
     if (inputValue.trim() === '') {
+       countriesListRef.innerHTML = '';
+        countryInfoRef.innerHTML ='';
         return
     }
 
@@ -22,7 +26,6 @@ export default function fetchCountries(name) {
         })
         .catch(error => console.log('error'));
     
-        console.log(onSuccses);
     return countriesList.then(onSuccses).catch(onError);
 }
 
