@@ -39,3 +39,28 @@ body {
 .country-icon {
   margin-right: 20px;
 }
+
+.title__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.country-description {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.country-description__item:not(:first-child) {
+  margin-top: 15px;
+}
+
+.country-description__text {
+  margin-right: 10px;
+  font-weight: 700;
+}
